@@ -6,7 +6,7 @@
 /*   By: thelmy <thelmy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 16:12:16 by thelmy            #+#    #+#             */
-/*   Updated: 2024/07/22 00:07:11 by thelmy           ###   ########.fr       */
+/*   Updated: 2024/07/22 00:42:05 by thelmy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -695,6 +695,7 @@ int enemy(t_game *game)
 	int enemies_counter = 0;
 
 	//static int direction = 0;
+
     count++;
     if (count < 5000)
         return 0;
@@ -770,6 +771,7 @@ t_game game_engine(int ac, char **av)
 
 	win = NULL;
 	game = parsing(ac, av);
+	
 	game.direction = 0;
 	game.mlx = mlx_init();
 	if (!game.mlx)
@@ -802,7 +804,6 @@ t_game game_engine(int ac, char **av)
 int main(int ac, char **av)
 {
 	t_game game;
-	game.direction = 0;
 	game = game_engine(ac, av);
 	
 	// printer(game);
